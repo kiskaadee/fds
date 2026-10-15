@@ -1,0 +1,11 @@
+# Compiled binaries & object files
+*.o
+*.out
+*.so
+*.a
+
+# Editor temporary files
+*.swp
+*~
+.vscode/
+.idea/
