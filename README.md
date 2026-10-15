@@ -12,7 +12,7 @@ The environment runs Void Linux inside Docker and includes:
 - **Documentation**: `man-pages`, `man-db`
 - **Utilities**: `tree`, `less`, `curl`, `vim`, `nano`
 
-The container mounts the repository root directly at `/home/kiskaadee/fds` with matching host user UID (1000) so any code or notes created inside persist across container sessions. Tracing capabilities (`SYS_PTRACE`) are enabled.
+The container mounts the `./data` directory directly at `/home/kiskaadee/fds` with matching host user UID (1000) so any code or notes created inside persist across container sessions while keeping the repository root clean. Tracing capabilities (`SYS_PTRACE`) are enabled.
 
 ## Quick Start
 
