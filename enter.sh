@@ -20,6 +20,7 @@ echo "🚀 Entering $IMAGE_NAME container (workspace: $DATA_DIR)..."
 # - Mount host data directory to /home/kiskaadee/fds for persistent work
 # - Grant SYS_PTRACE and unconfined seccomp to allow strace / proc inspection of file descriptors
 exec docker run --rm -it \
+    --hostname fds-lab \
     --cap-add=SYS_PTRACE \
     --security-opt seccomp=unconfined \
     -v "$DATA_DIR:/home/kiskaadee/fds" \

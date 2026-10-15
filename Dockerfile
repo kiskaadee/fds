@@ -22,12 +22,14 @@ RUN sed -i 's|https://alpha.de.repo.voidlinux.org|https://repo-default.voidlinux
        tree \
        shadow \
        sudo \
+       ncurses \
     && xbps-remove -Ooy
 
 # Create user 'kiskaadee' (UID 1000)
 RUN useradd -m -u 1000 -s /bin/bash kiskaadee \
     && echo "kiskaadee ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
-    && echo 'PS1="\u - void linux \w \$ "' >> /home/kiskaadee/.bashrc
+    && echo 'PS1="\u - void linux \w \$ "' >> /home/kiskaadee/.bashrc \
+    && echo "bind -x '\"\C-l\": clear'" >> /home/kiskaadee/.bashrc
 
 # Set workspace directory
 WORKDIR /home/kiskaadee/fds
