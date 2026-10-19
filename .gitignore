@@ -9,3 +9,7 @@
 *~
 .vscode/
 .idea/
+
+# Local helper scripts
+open-tutorial.sh
+watch.sh
